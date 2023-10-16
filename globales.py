@@ -1,5 +1,5 @@
 import json
-from character import Characther
+from character import Character
 
 class constants ():
     PATHFITXEROJSON = "json/StarWars.json"
@@ -13,7 +13,7 @@ def getFile():
     try:
         with open('tu_archivo.json', 'r') as fileReader:
             data = json.load(fileReader)
-        characters = [Characther(**item) for item in data]
+        characters = [Character(**item) for item in data]
         return characters
     except:
         print ("Hi ha Hagut un error")
