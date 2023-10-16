@@ -1,2 +1,0 @@
-class constants ():
-    PATHFITXERO = ""

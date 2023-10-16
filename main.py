@@ -1,8 +1,5 @@
-from utils import constants
-
-def ReadJSON():
-
+from globales import constants, getFile
 
 def main ():
-
+    hola = getFile(";")
 main()
