@@ -12,13 +12,9 @@ class Character_films(Character):
         eye_color,
         mass,
         homeworld,
-        birth_year,
-        num_of_films,
-        first_film,
-        alive_at_the_end
+        birth_year
         ):
-        super().__init__(self,
-        edited,
+        super().__init__(edited,
         name,
         created,
         gender,
@@ -29,17 +25,26 @@ class Character_films(Character):
         mass,
         homeworld,
         birth_year)
-        self.__num_of_films = num_of_films
-        self.__first_film = first_film
-        self.__alive_at_the_end = alive_at_the_end
+    
+    @property
+    def num_of_films(self):
+        return self.__num_of_films
     
     @num_of_films.setter
     def num_of_films(self, set_num_of_films):
         self.__num_of_films = set_num_of_films
     
+    @property
+    def first_film(self):
+        return self.__first_film
+    
     @first_film.setter
     def first_film(self, set_first_film):
         self.__first_film = set_first_film
+
+    @property
+    def alive_at_the_end(self):
+        return self.__alive_at_the_end
     
     @alive_at_the_end.setter
     def alive_at_the_end(self, set_alive_at_the_end):
