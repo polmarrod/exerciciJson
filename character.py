@@ -28,3 +28,7 @@ class Character:
     @property
     def info(self):
         print(self.__name, self.__gender, self.__homeworld, self.__birth_year)
+    
+    @property
+    def getName(self):
+        return self.__name
