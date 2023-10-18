@@ -9,9 +9,9 @@ def getChars():
     try:
         with open(constants.PATHFITXEROJSON, 'r') as fileReader:
             data = json.load(fileReader)
-        characters = []
-        characters = [Character_films(**item["fields"]) for item in data]
-        return characters
+        character_film_list = []
+        character_film_list = [Character_films(**item["fields"]) for item in data]
+        return character_film_list
     except :
         print ("Hi ha Hagut un error")
         return None
