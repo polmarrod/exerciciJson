@@ -4,17 +4,13 @@ from character import Character
 class constants ():
     PATHFITXEROJSON = "json/StarWars.json"
 
-def toClass():
-    
-    return 
-
-def getFile():
-    path = constants.PATHFITXEROJSON
+def getChars():
     try:
-        with open('tu_archivo.json', 'r') as fileReader:
+        with open(constants.PATHFITXEROJSON, 'r') as fileReader:
             data = json.load(fileReader)
-        characters = [Character(**item) for item in data]
+        characters = []
+        characters = [Character(**item["fields"]) for item in data]
         return characters
-    except:
+    except :
         print ("Hi ha Hagut un error")
         return None
